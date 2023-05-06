@@ -1,0 +1,92 @@
+<html>
+<head>
+<title>Galaxies</title>
+<script>
+
+var top_img = "img1";
+var img_src = new Array ("img1", "img2", "img3", "img4", "M51", "M104");
+var quote_src = new Array ("Galaxy Cluster", "Interacting Galaxies", "NGC 1300", "NGC 6217", "M51", "M104")
+
+function get_img () {
+   let img_and_quote = [];
+   var rnd_idx = Math.trunc (Math.random() * img_src.length);
+   img_and_quote[0]=img_src[rnd_idx];
+   img_and_quote[1]=quote_src[rnd_idx];
+   return img_and_quote;
+}
+
+
+
+function changeImg() {
+   var img_and_quote = get_img();
+   var new_img = img_and_quote[0]
+   styleTop = document.getElementById(top_img).style;
+   styleNew = document.getElementById(new_img).style;
+   styleTop.zIndex = "0";
+   styleNew.zIndex = "10";
+   top_img = new_img;
+   
+   var the_quote = document.getElementById("quotey");
+   the_quote.innerHTML = img_and_quote[1];
+}
+
+
+
+</script> 
+<style type = "text/css">
+  .img1 {position: absolute; margin:auto; top: 0; left: 0; bottom: 0; right: 0;  border-style: solid; border-color: white; border-width:large;}
+  .img2 {position: absolute;  margin:auto; top: 0; left: 0; bottom: 0; right: 0; border-style: solid; border-color: white; border-width:large;}
+  .img3 {position: absolute;  margin:auto; top: 0; left: 0; bottom: 0; right: 0; border-style: solid; border-color: white; border-width:large;}
+  .img4 {position: absolute;  margin:auto; top: 0; left: 0; bottom: 0; right: 0; border-style: solid; border-color: white; border-width:large;}
+  .M51 {position: absolute;  margin:auto; top: 0; left: 0; bottom: 0; right: 0; border-style: solid; border-color: white; border-width:large;}
+  .M104 {position: absolute;  margin:auto; top: 0; left: 0; bottom: 0; right: 0; border-style: solid; border-color: white; border-width:large;}
+  
+  h1{color:white;}
+  
+  html{background-color: black;}
+  
+  h4{
+  color:white
+  }
+  
+  div{
+  position:absolute; margin:auto; top: 20%; left: 0; bottom: 0; right: 0;}
+ 
+
+</style>
+</head>
+<center>
+<h1>Galaxies</h1>
+</center>
+<body onload = "changeImg()">
+<form action = "">
+   <p>
+      <img class = "img1"  id = "img1" src = "img1.jpg"
+           alt = "(Picture of a Mountain)" width = "640" height = "480" />
+		   
+      <img class = "img2"  id = "img2" src = "img2.jpg"
+           alt = "(Picture of a Lake)" width = "640" height = "480" />
+		   
+      <img class = "img3"  id = "img3" src = "img3.jpg"
+           alt = "(Picture of a Forest)" width = "640" height = "480"/>
+		   
+	  <img class = "img4" id = "img4" src = "img4.jpg"
+           alt = "(Picture of a Mountain)" width = "640" height = "480" />
+		   
+      <img class = "M51"  id = "M51" src = "M51.jpg"
+           alt = "(Picture of a Lake)" width = "640" height = "480" />
+		   
+      <img class = "M104"  id = "M104" src = "M104.jpg"
+           alt = "(Picture of a Forest)" width = "640" height = "480"/>
+   </p> 
+   
+   <center>
+   <div>
+   <h4 id="quotey"></h4>
+   </div>
+   </center>
+   
+   
+</form>
+</body>
+</html>

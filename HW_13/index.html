@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NewsPaper Welcome</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+
+
+<center>
+  <h1>Welcome</h1>
+  <a href="javascript:void(0);"  onclick="return authenticate('story_1.html')"><h5>Story_1</h5></a>
+  <a href="javascript:void(0);" onclick="return authenticate('story_2.html')"><h5>Story_2</h5></a>
+  <a href="javascript:void(0);"  onclick="return authenticate('story_3.html')"><h5>Story_3</h5></a>
+  <a href="javascript:void(0);"  onclick="return authenticate('story_4.html')"><h5>Story_4</h5></a>
+  <a href="javascript:void(0);"  onclick="return authenticate('story_5.html')"><h5>Story_5</h5></a>
+</center>
+
+<!-- The form -->
+
+<div class="form-popup" id="myForm">
+  <form action="php.php" class="form-container" method="post">
+    <h1>Login</h1>
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+    <input type="hidden" name="url" id="link" value="">
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+
+
+
+	<script>
+function authenticate(href) {
+  
+
+  var hasCredentials = confirm("Press (OK) to login, Press (Cancel) to make an account");
+  if (hasCredentials) {
+    document.getElementById("myForm").style.display = "block";
+    document.getElementById("link").value = href;
+    return false;
+  } else {
+    window.location.href = "registration.php?redirectUrl=" + encodeURIComponent(href);
+    return false;
+  }
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+        </script>
+  </body>
+</html>

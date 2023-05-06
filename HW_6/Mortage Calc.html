@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+	
+	<style>
+	p{
+	border-style: solid;
+	width:10%;
+	height:20px;
+	}
+	
+	.container{
+	background-color:AliceBLue;
+	width:80%;
+	height:600px;
+	}
+	
+	html{
+	background-color:lightskyblue;}
+	
+	</style>
+</head>
+<body>
+
+<center>
+<div class="container">
+<form name="myForm" action="" method="GET">
+  <h1>Mortage Calculator</h1> <br>
+  <label for="inputbox">Principle Amount:</label><br>
+  <input type="text" name="inputbox" value=""><br>
+  
+  <label for="inputbox2">Yearly Interest Rate:</label><br>
+  <input type="text" name="inputbox2" value=""><br>
+  
+  <label for="inputbox3">Loan Term (months):</label><br>
+  <input type="text" name="inputbox3" value=""><br>
+  
+  <input type="button" name="button" value="Calculate" onClick="testResults(this.form)">
+  <input type="reset" value="Cancel">
+</form>
+<br>
+<br>
+<label for="demo4">Monthly Payment</label>
+<p id="demo4"></p>
+<br>
+
+<label for="demo5">Total Cost</label>
+<p id="demo5"></p>
+<br>
+
+<label for="demo4">Total Interest Cost</label>
+<p id="demo6"></p>
+</div
+</center>
+
+<script type="text/javascript" src="javascript.js">
+</script>
+
+</body>
+</html>

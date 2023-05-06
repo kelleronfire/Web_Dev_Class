@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+ <center><h1>Tic-Tac-Toe</h1></center>
+ <center><h4 id=green>X WON <span id = scorex></span> Times</h4></center>
+ <center><h4 id=red>O WON <span id = scoreo></span> Times</h4></center>
+ 
+ <table>
+  <tr>
+    <td><button onclick="XorO('one');who_won()" class = "the_but" id="one"></button</td>
+    <td class="sides"><button onclick="XorO('two');who_won()" class = "the_but" id="two"></button</td>
+    <td><button onclick="XorO('three');who_won()" class = "the_but" id="three"></button</td>
+  </tr>
+  <tr>
+    <td class="tops"><button onclick="XorO('four');who_won()"  class = "the_but" id="four"></button</td>
+    <td class="sides tops"><button onclick="XorO('five');who_won()" class = "the_but" id="five"></button</td>
+    <td class="tops"><button onclick="XorO('six');who_won()"  class = "the_but" id="six"></button</td>
+  </tr>
+  <tr>
+    <td><button  onclick="XorO('seven');who_won()" class = "the_but" id="seven"></button</td>
+    <td class="sides"><button onclick="XorO('eight');who_won()" class = "the_but" id="eight"></button</td>
+    <td><button onclick="XorO('nine');who_won()" class = "the_but" id="nine"></button</td>
+  </tr>
+</table>
+<center><button onclick="clearboard()" id=clear>Clear</button></center>
+  
+  
+  
+  
+  
+  
+	<script>
+let count=1;
+var X_wins = 0;
+var O_wins = 0;
+function XorO(buttonID){
+  var button = document.getElementById(buttonID);
+  if(count % 2==0){
+	 button.innerHTML = "O";
+   //The number is even or an O
+}
+else {
+   button.innerHTML = "X"
+   //The number is odd or an X
+}
+button.disabled = true; 
+count = count + 1;
+}
+
+
+function who_won(){
+const win_patterns = [["one","two","three"],["four","five","six"],["seven","eight","nine"],["one","four","seven"],["two","five","eight"],["three","six","nine"],["one","five","nine"],["three","five","seven"]];
+
+for(var i = 0; i < win_patterns.length; i++) {
+    var row = win_patterns[i];
+	//document.write(row);
+    var button1 = document.getElementById(row[0]);
+	var button2 = document.getElementById(row[1]);
+	var button3 = document.getElementById(row[2]);
+	button1.innerHTML
+	if (button1.innerHTML.trim() === "") {
+      continue;
+  }  
+    if (button2.innerHTML.trim() === "") {
+      continue;
+  } 
+  	if (button3.innerHTML.trim() === "") {
+      continue;
+  } 
+   
+   if (button1.innerHTML === button2.innerHTML && button2.innerHTML === button3.innerHTML){
+   alert(button1.innerHTML + "  has won");
+   if (button1.innerHTML === "X"){
+   X_wins = X_wins + 1;}
+   else{
+   O_wins = O_wins + 1;}
+   document.getElementById("scorex").innerHTML = X_wins;
+   document.getElementById("scoreo").innerHTML = O_wins;}
+	
+}
+}
+
+function clearboard(){
+  var clear1 = document.getElementById("one");
+  clear1.innerHTML = "";
+  clear1.disabled = false;
+  
+  var clear2 = document.getElementById("two");
+  clear2.innerHTML = "";
+  clear2.disabled = false;
+  
+  var clear3 = document.getElementById("three");
+  clear3.innerHTML = "";
+  clear3.disabled = false;
+  
+  var clear4 = document.getElementById("four");
+  clear4.innerHTML = "";
+  clear4.disabled = false;
+  
+  var clear5 = document.getElementById("five");
+  clear5.innerHTML = "";
+  clear5.disabled = false;
+  
+  var clear6 = document.getElementById("six");
+  clear6.innerHTML = "";
+  clear6.disabled = false;
+  
+  var clear7 = document.getElementById("seven");
+  clear7.innerHTML = "";
+  clear7.disabled = false;
+  
+  var clear8 = document.getElementById("eight");
+  clear8.innerHTML = "";
+  clear8.disabled = false;
+  
+  var clear9 = document.getElementById("nine");
+  clear9.innerHTML = "";
+  clear9.disabled = false;
+  
+  count = 1;
+
+}
+
+	
+	</script>
+  </body>
+</html>

@@ -1,0 +1,213 @@
+
+
+h1 { margin-top: 0;
+     font-size: 35px;
+	 padding:5px;
+     color:white;
+     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+h4 { margin-top: -33px;
+     font-size: 20px;
+     color:white;
+     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+     padding: 5px;
+}
+
+nav {top: 35px;
+	padding: 10px;
+	word-spacing: 22px;
+	letter-spacing: -1px;
+	font-family:Courier New;
+	display: inline;
+	position: relative;
+	left: -480px;
+	}
+
+html,body {
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+	color: black;
+  }
+
+#myheader{
+	height: 75px;
+	background-color: #38b6ff;
+	z-index: 9001;
+	
+}
+
+p{
+	position: relative;
+	top: 10px;
+	font-family:Courier New;
+	display: inline;
+	padding: 10px;
+	
+}
+
+
+
+#Home{
+	height: 900px;
+
+}
+
+#About{
+height: 700px;
+}
+
+#Areas_of_Interest{
+	height: 600px;
+	padding:25px;
+}
+
+#Skills_Expertise{
+	height: 200px;
+}
+  
+#Home{
+	background: linear-gradient(0deg, #38b6ff,#38b6ff);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	margin:0px;
+	text-align: center;	
+}
+
+ 
+#About{
+	background: linear-gradient(0deg, #a5d2f7,#38b6ff);
+	margin:0px;
+	padding:25px;
+	margin-top: 0px;
+	
+}
+
+#Areas_of_Interest{
+	background: linear-gradient(0deg, #cfe7f9,#a5d2f7 );
+	display:flex;
+	justify-content:center;
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+#Skills_Expertise{
+	background-color: #cfe7f9;
+	padding:25px;
+}
+
+
+
+
+/* The following is to make the nav links light up when hovered over */
+body,
+html {
+  
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  gap: 0.625%;
+}
+
+a {
+  flex: 1;
+  text-decoration: none;
+  outline: none;
+  text-align: center;
+  line-height: 1;
+  color: black;
+  font-family:Courier New;
+}
+
+a:link,
+a:visited,
+a:focus {
+  background: #38b6ff;
+  color: black;
+}
+
+a:hover {
+  background: orange;
+}
+
+a:active {
+  background: darkred;
+  color: white;
+}
+
+/* the above is to make the navlinks light up when hovered */
+
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
+
+p1{
+
+	text-align: left;
+	font-family:Courier New;
+	font-size: 20px;
+	
+}
+
+p3{
+font-size: 25px;
+font-family:Courier New;
+font-weight: bold;
+
+}
+
+
+p4{
+font-family:Courier New;
+
+}
+
+
+p2{
+	text-align: right;
+	font-family:Courier New;
+	font-size: 20px;}
+	
+	
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2,29%);
+  gap: 15%;
+  grid-auto-rows: minmax(100px, auto);
+  margin-top:5%;
+  justify-content:center;
+  margin-right:7%;
+ 
+}
+
+#bio{width:80%;
+     font-family:Courier New;
+	 font-size: 20px;}
+

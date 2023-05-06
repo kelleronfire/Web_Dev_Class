@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title> Drag and drop </title>
+   <script type = "text/javascript" src = "./dragNDrop.js"></script>
+
+   <style>
+      span {
+         background-color: lightgrey;
+      }
+	  
+	  #background{
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+       user-select: none;
+	  }
+	  
+	  div{  position: relative;
+            left: 13%;
+			}
+	  
+   </style>
+</head>
+
+<body style = "font-size: 20;" onload = "image_change()">
+<center><h1>Jigsaw Puzzle</h1></center>
+    
+   <center>
+   <img src="puzzle1\puzzleback.gif" alt="puzzle grid" id="background" width="400" height="300">
+   </center>	
+   <div>
+   <span style = "position: absolute; top: 300px; left:   0%;" onmousedown = "grabber(event);"> <img src="puzzle1\img1-1.jpg" alt="puzzle_piece" id="img1" width="100" height="100"> </span>
+   <span style = "position: absolute; top: 300px; left:  6%;" onmousedown = "grabber(event);"> <img src="puzzle1\img1-2.jpg" alt="puzzle_piece" id="img2" width="100" height="100"> </span>
+   <span style = "position: absolute; top: 300px; left: 12%;" onmousedown = "grabber(event);"> <img src="puzzle1\img1-3.jpg" alt="puzzle_piece" id="img3" width="100" height="100"> </span>
+   <span style = "position: absolute; top: 300px; left: 18%;" onmousedown = "grabber(event);"> <img src="puzzle1\img1-4.jpg" alt="puzzle_piece" id="img4" width="100" height="100"> </span>
+   <span style = "position: absolute; top: 300px; left: 24%;" onmousedown = "grabber(event);"> <img src="puzzle1\img1-5.jpg" alt="puzzle_piece" id="img5" width="100" height="100"> </span>
+   <span style = "position: absolute; top: 300px; left: 30%;" onmousedown = "grabber(event);"> <img src="puzzle1\img1-6.jpg" alt="puzzle_piece" id="img6" width="100" height="100"> </span>
+   <span style = "position: absolute; top: 300px; left: 36%;" onmousedown = "grabber(event);"> <img src="puzzle1\img1-7.jpg" alt="puzzle_piece" id="img7" width="100" height="100"> </span>
+   <span style = "position: absolute; top: 300px; left: 42%;" onmousedown = "grabber(event);"> <img src="puzzle1\img1-8.jpg" alt="puzzle_piece" id="img8" width="100" height="100"> </span>
+   <span style = "position: absolute; top: 300px; left: 48%;" onmousedown = "grabber(event);"> <img src="puzzle1\img1-9.jpg" alt="puzzle_piece" id="img9" width="100" height="100"> </span>
+   <span style = "position: absolute; top: 300px; left: 54%;" onmousedown = "grabber(event);"> <img src="puzzle1\img1-10.jpg" alt="puzzle_piece" id="img10" width="100" height="100"> </span>
+   <span style = "position: absolute; top: 300px; left: 60%;" onmousedown = "grabber(event);"> <img src="puzzle1\img1-11.jpg" alt="puzzle_piece" id="img11" width="100" height="100"> </span>
+   <span style = "position: absolute; top: 300px; left: 66%;" onmousedown = "grabber(event);"> <img src="puzzle1\img1-12.jpg" alt="puzzle_piece" id="img12" width="100" height="100"> </span>
+   </div>
+</p>
+</body>
+</html>

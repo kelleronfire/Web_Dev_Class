@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>Slide Show</title>
+<script>
+
+var top_img = "img_1";
+var image_list = new Array("img_1","img_2","img_3","img_4","img_5","img_6","img_7","img_8","img_9","img_10","img_11");
+var counter = 0;
+
+function next_img(){
+   if(counter == 11){
+   counter = 0;}
+   var new_img = image_list[counter];
+   ++counter
+   return new_img;
+}
+
+function changeImg() {
+   var new_img = next_img();
+   styleTop = document.getElementById(top_img).style;
+   styleNew = document.getElementById(new_img).style;
+   styleTop.zIndex = "0";
+   styleNew.zIndex = "10";
+   top_img = new_img;
+}
+
+function timer_start(){
+   myInterval = setInterval(changeImg,3000);
+   return myInterval;
+}
+
+function timer_stop(){
+   clearInterval(myInterval); 
+}
+
+</script> 
+<style type = "text/css">
+  .image {position: absolute; margin:auto; top: 0; left: 0; bottom: 0; right: 0;  border-style: solid; border-color: peru; border-width:large; width:900px; height:600px;}
+
+  h1{color:Peru;}
+  
+  html{background-color: Moccasin;}
+  
+  h4{
+  color:white;
+  }
+  
+  div{
+  position:absolute; margin:auto; top: 12%; left: 0; bottom: 0; right: 0;}
+  
+  .button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: IndianRed;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+  .button:hover {background-color: Peru}
+
+  .button:active {
+    background-color: Peru;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+ 
+
+</style>
+</head>
+<center>
+<h1>The Traveling Slide Show</h1>
+</center>
+<body>
+<form action = "">
+     <p>
+      <img class = "image"  id = "img_1" src = "img_1.jpg"
+           alt = "OOPS" width = "640" height = "480" />
+		   
+      <img class = "image"  id = "img_2" src = "img_2.jpeg"
+           alt = "OOPS" width = "640" height = "480" />
+		   
+      <img class = "image"  id = "img_3" src = "img_3.jpg"
+           alt = "OOPS" width = "640" height = "480"/>
+		   
+	  <img class = "image" id = "img_4" src = "img_4.jpg"
+           alt = "OOPS" width = "640" height = "480" />
+		   
+      <img class = "image"  id = "img_5" src = "img_5.jpeg"
+           alt = "OOPS" width = "640" height = "480" />
+		   
+      <img class = "image"  id = "img_6" src = "img_6.jpg"
+           alt = "OOPS" width = "640" height = "480"/>	   
+		   
+      <img class = "image"  id = "img_7" src = "img_7.jpeg"
+           alt = "OOPS" width = "640" height = "480" />
+		   
+      <img class = "image"  id = "img_8" src = "img_8.jpg"
+           alt = "OOPS" width = "640" height = "480" />
+		   
+      <img class = "image"  id = "img_9" src = "img_9.jpg"
+           alt = "OOPS" width = "640" height = "480"/>
+		   
+	  <img class = "image" id = "img_10" src = "img_10.jpeg"
+           alt = "OOPS" width = "640" height = "480" />
+		   
+      <img class = "image"  id = "img_11" src = "img_11.jpg"
+           alt = "OOPS" width = "640" height = "480" />
+   </p> 
+   
+   <center>
+   <div>
+   <input id="clickMe" type="button" class="button" value="START" onclick="timer_start();" />
+   <input id="clickMe" type="button" class="button" value="END" onclick="timer_stop();" />
+   </div>
+   </center>
+   
+   
+</form>
+</body>
+</html>

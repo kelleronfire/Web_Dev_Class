@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Form Submission</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#submit-form").submit(function(e) {
+                e.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "update.php",
+                    data: $("#submit-form").serialize(),
+                    success: function(response) {
+                        $("#message").html(response);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>AJAX/SQL Form Submission</h1>
+    <form id="submit-form">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password"><br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+    <div id="message"></div>
+</body>
+</html>
+
+

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+	
+	<style>
+	div{line-height:0.5;}
+	
+	
+	</style>
+	
+	
+  </head>
+  
+  <body>
+
+
+  <div>
+  <center><h2>Quiz 1</h2></center>
+  <center><h2>CS 329E - Elements of Web Programming</h2></center>
+  <center><h2>September 8, 2019</h2></center>
+  </div>
+  <!--this is for text entry-->
+  
+  <form method="POST" action="./php.php">
+  <table>
+  <tr>
+  <td>
+  <h3>True/False</h3>
+
+  
+  <p><b>1. "URL" stands for "Universal Reference Link".</b></p>
+  <input type="radio" id="T" name="radio1" value="TRUE">
+  <label for="T">True</label><br>
+  <input type="radio" id="F" name="radio1" value="FALSE">
+  <label for="F">False</label><br>
+  
+
+
+</tr>
+</td>
+
+  <tr>
+  <td>
+  
+  <p><b>2. An Apple MacBook is an example of a Linux system</b></p>
+  <input type="radio" id="T2" name="radio2" value="TRUE">
+  <label for="T2">True</label><br>
+  <input type="radio" id="F2" name="radio2" value="FALSE">
+  <label for="F2">False</label><br>
+  
+
+</tr>
+</td>
+
+
+  <!-- This is for the check boxes -->
+  <tr>
+  <td>
+  
+  <h3>Multiple Choice</h3>
+  <p><b>3. Which of these do NOT contribute to packet delay in a packet switching network?</b></p>
+  <input type="checkbox" id="check1" name="checkbox1[]" value="1">
+  <label for="check1">Processing delay at a router</label><br>
+  <input type="checkbox" id="check2" name="checkbox1[]" value="2">
+  <label for="check2">CPU workload on a client</label><br>
+  <input type="checkbox" id="check3" name="checkbox1[]" value="3">
+  <label for="check3">Transmission delay along a communications link</label><br>
+  <input type="checkbox" id="check4" name="checkbox1[]" value="4">
+  <label for="check4">Propagation delay</label><br>
+  </td>
+  </tr>
+  
+  <!-- These are the radio buttons -->
+  <tr>
+  <td>
+  <p><b>4. This Internet layer is responsible for creating the packets that move across the network.</b></p>
+  <input type="checkbox" id="check21" name="checkbox2[]" value="1">
+  <label>Physical</label><br>
+  <input type="checkbox" id="check22" name="checkbox2[]" value="2">
+  <label>Data Link</label><br>
+  <input type="checkbox" id="check23" name="checkbox2[]" value="3">
+  <label>Network</label><br>
+  <input type="checkbox" id="check24" name="checkbox2[]" value="4">
+  <label>Transport</label><br>
+
+  </td>
+  </tr>
+
+  
+<!-- this is for comments box -->  
+  <tr>
+  <td>
+  <h3>Fill in the Blank</h3>
+  <label><b>5)</b></label>
+        <input type="text" size="5" id="textbox1" name="textbox1" placeholder="blank">
+  <label><b>is a networking protocol that runs over TCP/IP, and governs communication between web browsers and web servers.</b></label>
+  
+  <br>
+  <br>
+  
+    <label><b>6)</b></label>
+	<label><b>A small icon displayed in a browser table that identifies a website is called a</b></label>
+        <input type="text" size="5" id="textbox2" name="textbox2" placeholder="blank">
+	<br>
+	<br>
+    <button type="submit" value="Grade" onClick="return filledout()">Grade</button>
+    <button type="reset" value="Reset">Clear</button>
+  
+  </td>
+  </tr>
+  
+  
+  </table>
+  </form>
+
+
+
+  <script>
+
+  function filledout(){
+    
+    var counter = 0;
+
+    if(document.getElementById("T").checked == false && document.getElementById("F").checked == false) {
+    alert("You must answer Q1");
+    counter = counter + 1;}
+
+    if(document.getElementById("T2").checked == false && document.getElementById("F2").checked == false) {
+    alert("You must answer Q2");
+    counter = counter + 1;}
+
+    if(document.getElementById("check1").checked == false && document.getElementById("check2").checked == false && document.getElementById("check3").checked == false && document.getElementById("check4").checked == false){
+    alert("You must answer Q3");
+    counter = counter + 1;}
+
+    if(document.getElementById("check21").checked == false && document.getElementById("check22").checked == false && document.getElementById("check23").checked == false && document.getElementById("check24").checked == false){
+    alert("You must answer Q4");
+    counter = counter + 1;}
+
+    var textbox1 = document.getElementById("textbox1").value;
+    if(textbox1.length == 0){
+    alert("You must answer Q5");
+    counter = counter + 1;} 
+
+    var textbox2 = document.getElementById("textbox2").value;
+    if(textbox2.length == 0){
+    alert("You must answer Q6");
+    counter = counter + 1;}
+    
+
+    if(counter > 0){
+      return false;}
+
+
+    if(counter == 0){
+       window.location.href="php.php"}
+
+  }
+
+  </script>
+
+
+
+  </body>
+  
+</html>

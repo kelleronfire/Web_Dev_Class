@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<div class="header" id = "myheader">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  
+  <p><a href="Index.html">HOME</a></p>
+  <p><a href="https://github.com/kelleronfire">GITHUB</a></p>
+  <p><a href="Portfolio.html">DASHBOARDS</a></p>
+  <p><a href="RESUME.docx.html">RESUME</a></p>
+  <p><a href="extra.html">PHOTOGRAPHY</a></p>
+  <nav>
+    
+	<a href="#About">ABOUT</a>
+	<a href="#Areas_of_Interest">SERVICES</a>
+	<a href="#Skills_Expertise">CONTACT</a>
+	
+  </nav>
+  </div>
+  </head> 
+  <section id = "Home">
+   <img src="CHarles Munroe (1).jpg" style="margin-top:230px;"
+   alt="logo" width = "300" height = "300" >
+  </section>
+  
+  <section id = "About">
+    <h1>ABOUT</h1>
+	
+	<img src="profilepic.jpg" alt="profile" width = "300" height = "450" ALIGN="left">
+	<div id="bio">
+	Hi, my name is Charles Keller Munroe, but my friends call me Keller. I grew up in Temple Texas before attending UT Austin where I graduated with a BS in Computational Biology as well as a minor in philosophy and a certificate
+	in Elements of Computing. I love being challenged, solving problems and creating finished products. I am a firm believer that no problem is too big as long as you approach it with the right mindset. Outside of tech I enjoy rock climbing, fishing, photography, slacklining and Philosophy.  
+	</div>
+  </section>
+  
+  <section id = "Areas_of_Interest">
+    <h1>Services</h1>
+	<div class="wrapper">
+	<div class="one">
+	<p3> Data Analysis </p3><br>
+	<p4>
+	<img src="dataanalysisicon.jpg" alt="logo" width = "50" height = "50" ALIGN="left">
+	Clearly Determine trends to provide buisness insight through vizualizations and models.
+	</p4>
+	</div>
+	
+	<div class="two">
+	<p3> Data Analytics </p3><br>
+	<p4>
+	<img src="analyticsicon.jpg" alt="logo" width = "50" height = "50" ALIGN="left">
+	Predictive modeling and machine learning techniques to help you drive buisness decesions.
+	</p4>
+	</div>
+	
+	<div class="three">
+	<p3> Dashboards </p3><br>
+	<p4>
+	<img src="dashboardicon.jpg" alt="logo" width = "50" height = "50" ALIGN="left">
+	Vizualizations of the most recent data to help you find your own buisness insights.
+	</p4>
+	</div>
+	
+	<div class="four">
+	<p3> Interactive Infographics</p3><br>
+	<p4>
+	<img src="interactive.jpg" alt="logo" width = "50" height = "50" ALIGN="left">
+	Display your data in an interesting and interactive way that helps the audience understand your story.
+	</p4>
+	</div>
+	
+	<div class="five">
+	<p3> Data Engineering</p3><br>
+	<p4>
+	<img src="databaseicon.jpg" alt="logo" width = "50" height = "50" ALIGN="left">
+	Design, build and deployment of various database systems.
+	</p4>
+	</div>
+	
+	<div class="six">
+	<p3> Front-end Web Development</p3><br>
+	<p4>
+	<img src="webicon.jpg" alt="logo" width = "50" height = "50" ALIGN="left">
+	Build a website to support your own buisness needs.</p4>
+	</div>
+	</div>
+	
+  </section>
+  
+  <section id = "Skills_Expertise">
+    <h1>Contact</h1>
+	<p2>Email: charles.munroe@utexas.edu</p2> <br>
+	<p2>Phone: (254)-780-7447</p2> <br>
+	
+	
+	
+	
+	
+
+  </section>
+
+<script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("myheader");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+
+
+
+
+</html>
